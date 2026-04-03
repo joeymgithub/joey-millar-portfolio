@@ -469,6 +469,34 @@ p {
     color: var(--text);
 }
 
+.tile-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-height: 40px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.58rem 0.9rem;
+    border: 1px solid var(--line-strong);
+    background: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text);
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.tile-cta-button:hover,
+.tile-cta-button:focus-visible {
+    background: #f6f6f6;
+    border-color: var(--line-strong);
+    color: var(--text);
+}
+
 .under-construction-sign {
     position: absolute;
     top: 14px;
@@ -483,7 +511,7 @@ button {
     appearance: none;
     border: 1px solid var(--line-strong);
     border-radius: 0;
-    background: transparent;
+    background: #ffffff;
     color: var(--text);
     padding: 0.52rem 0.9rem;
     font: inherit;
@@ -507,8 +535,8 @@ button {
 
 .inline-button:hover,
 button:hover {
-    background: var(--text);
-    color: var(--bg);
+    background: #f6f6f6;
+    color: var(--text);
 }
 
 .nav-logo-container {

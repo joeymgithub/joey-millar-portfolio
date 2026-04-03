@@ -31,22 +31,9 @@ body {
     font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: var(--text);
     background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(251, 250, 247, 0.55) 30%, rgba(244, 241, 235, 0.92) 100%),
         var(--bg);
     line-height: 1.6;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(21, 21, 21, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(21, 21, 21, 0.025) 1px, transparent 1px);
-    background-size: 36px 36px;
-    mask-image: radial-gradient(circle at center, black 35%, transparent 90%);
-    pointer-events: none;
-    z-index: -1;
 }
 
 a {
@@ -285,6 +272,9 @@ p {
     line-height: 1.02;
     margin-bottom: 26px;
     padding-bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
 .page-subpage h1::after {
@@ -304,19 +294,15 @@ p {
 }
 
 .page-home h1::after {
-    background: linear-gradient(90deg, rgba(217, 58, 47, 0.72), rgba(209, 173, 34, 0.3) 56%, transparent 100%);
+    background: linear-gradient(90deg, rgba(26, 138, 98, 0.9), rgba(26, 138, 98, 0.22) 72%, transparent 100%);
 }
 
-.page-building h1::after {
+.page-coding h1::after {
     background: linear-gradient(90deg, rgba(39, 100, 255, 0.85), rgba(39, 100, 255, 0.18) 72%, transparent 100%);
 }
 
 .page-journalism h1::after {
-    background: linear-gradient(90deg, rgba(35, 148, 93, 0.82), rgba(35, 148, 93, 0.18) 72%, transparent 100%);
-}
-
-.page-about h1::after {
-    background: linear-gradient(90deg, rgba(209, 173, 34, 0.82), rgba(209, 173, 34, 0.18) 72%, transparent 100%);
+    background: linear-gradient(90deg, rgba(209, 173, 34, 0.9), rgba(209, 173, 34, 0.24) 72%, transparent 100%);
 }
 
 .page-contact h1::after {
@@ -327,16 +313,12 @@ p {
     transform: rotate(3deg);
 }
 
-.page-building .polaroid-card {
+.page-coding .polaroid-card {
     transform: rotate(-5deg);
 }
 
 .page-journalism .polaroid-card {
     transform: rotate(2.5deg);
-}
-
-.page-about .polaroid-card {
-    transform: rotate(-3.5deg);
 }
 
 .page-contact .polaroid-card {
@@ -370,6 +352,35 @@ p {
 
 .tile-web-dev-placeholder {
     cursor: default;
+}
+
+.tile-placeholder {
+    cursor: default;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(251, 250, 247, 0.82)),
+        rgba(251, 250, 247, 0.82);
+}
+
+.tile-placeholder:hover {
+    transform: none;
+    border-color: var(--line);
+    box-shadow: var(--shadow);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(251, 250, 247, 0.82)),
+        rgba(251, 250, 247, 0.82);
+}
+
+.tile-placeholder::before {
+    opacity: 0;
+}
+
+.tile-placeholder .tile-image {
+    filter: saturate(0.35) contrast(0.96);
+}
+
+.tile-placeholder:hover .tile-image {
+    transform: none;
+    filter: saturate(0.35) contrast(0.96);
 }
 
 .tile-image-wrapper {
@@ -615,7 +626,7 @@ button:hover {
     }
 
     .landing-nav a::after {
-        bottom: 4px;
+        display: none;
     }
 
     .landing-nav a[aria-current="page"] {
@@ -693,9 +704,13 @@ button:hover {
         display: none;
     }
 
-    .inline-button,
     button {
         width: 100%;
+        justify-content: center;
+    }
+
+    .inline-button {
+        width: auto;
         justify-content: center;
     }
 

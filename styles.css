@@ -461,12 +461,26 @@ p {
 
 .tile-cta {
     margin-top: auto;
+    display: inline-flex;
+    align-items: center;
     padding-top: 12px;
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--text);
+}
+
+.tile-cta::after {
+    content: "→";
+    margin-left: 0.5rem;
+    transition: transform 0.25s ease;
+}
+
+.tile-journalism:hover .tile-cta::after,
+.tile-copywriting:hover .tile-cta::after,
+.tile-web-dev:hover .tile-cta::after {
+    transform: translateX(3px);
 }
 
 .tile-cta-button {
@@ -565,6 +579,11 @@ button:hover {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
+}
+
+.site-footer a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.14em;
 }
 
 .article-shell {

@@ -685,7 +685,19 @@ button:hover {
     }
 
     .polaroid-card {
-        display: none;
+        display: block;
+        order: -1;
+        justify-self: center;
+        width: min(165px, 46vw);
+        padding: 12px 10px 14px;
+        transform: rotate(-3deg);
+        margin-bottom: 2px;
+    }
+
+    .polaroid-card::before {
+        width: 58px;
+        height: 20px;
+        top: -11px;
     }
 
     .page-header {
@@ -773,6 +785,17 @@ button:hover {
     .page-subpage h1::after {
         width: 108%;
         height: 10px;
+    }
+
+    .polaroid-card {
+        width: min(148px, 52vw);
+        padding: 10px 9px 12px;
+    }
+
+    .polaroid-card::before {
+        width: 52px;
+        height: 18px;
+        top: -10px;
     }
 
     .tile-image {

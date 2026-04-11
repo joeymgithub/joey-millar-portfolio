@@ -398,6 +398,14 @@ p {
     transition: transform 0.45s ease, filter 0.45s ease;
 }
 
+.tile-sprite-image {
+    box-sizing: border-box;
+    padding: 70px 24px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    background: #f1eee7;
+}
+
 .tile-journalism > .tile-image,
 .tile-copywriting > .tile-image,
 .tile-web-dev > .tile-image {

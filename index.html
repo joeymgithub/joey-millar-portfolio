@@ -22,17 +22,26 @@
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Joey Millar",
-            "url": "https://joeymillar.com/",
-            "image": "https://joeymillar.com/images/me.jpg",
-            "jobTitle": "Marketing content lead, vibe coder, former national news editor",
-            "worksFor": {
-                "@type": "Organization",
-                "name": "Cuvva"
-            },
-            "sameAs": [
-                "https://www.linkedin.com/in/josephmillar/"
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "name": "Joey Millar",
+                    "url": "https://joeymillar.com/"
+                },
+                {
+                    "@type": "Person",
+                    "name": "Joey Millar",
+                    "url": "https://joeymillar.com/",
+                    "image": "https://joeymillar.com/images/me.jpg",
+                    "jobTitle": "Marketing content lead, vibe coder, former national news editor",
+                    "worksFor": {
+                        "@type": "Organization",
+                        "name": "Cuvva"
+                    },
+                    "sameAs": [
+                        "https://www.linkedin.com/in/josephmillar/"
+                    ]
+                }
             ]
         }
     </script>

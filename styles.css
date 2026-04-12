@@ -165,19 +165,7 @@ p {
     border-radius: 4px;
     background: rgba(251, 250, 247, 0.82);
     text-decoration: none;
-    transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
-}
-
-.tile-journalism::before,
-.tile-copywriting::before,
-.tile-web-dev::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.55), transparent 55%);
-    opacity: 0;
-    transition: opacity 0.28s ease;
-    pointer-events: none;
+    transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
 }
 
 .tile-journalism:hover,
@@ -186,13 +174,6 @@ p {
     transform: translateY(-6px);
     border-color: var(--line-strong);
     box-shadow: 0 28px 70px rgba(21, 21, 21, 0.1);
-    background: var(--panel);
-}
-
-.tile-journalism:hover::before,
-.tile-copywriting:hover::before,
-.tile-web-dev:hover::before {
-    opacity: 1;
 }
 
 .page-header {
@@ -348,39 +329,6 @@ p {
 .page-home .tile-copywriting,
 .page-home .tile-web-dev {
     min-height: 170px;
-}
-
-.tile-web-dev-placeholder {
-    cursor: default;
-}
-
-.tile-placeholder {
-    cursor: default;
-    background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(251, 250, 247, 0.82)),
-        rgba(251, 250, 247, 0.82);
-}
-
-.tile-placeholder:hover {
-    transform: none;
-    border-color: var(--line);
-    box-shadow: var(--shadow);
-    background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(251, 250, 247, 0.82)),
-        rgba(251, 250, 247, 0.82);
-}
-
-.tile-placeholder::before {
-    opacity: 0;
-}
-
-.tile-placeholder .tile-image {
-    filter: saturate(0.35) contrast(0.96);
-}
-
-.tile-placeholder:hover .tile-image {
-    transform: none;
-    filter: saturate(0.35) contrast(0.96);
 }
 
 .tile-image-wrapper {
